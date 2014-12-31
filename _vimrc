@@ -165,8 +165,17 @@ endfunc
 
 map \main :call MainPython()<CR>
 func MainPython(...)
-    let mainString = ["if __name__ == '__main__':"]
+    let mainString = ["if __name__ == '__main__':", '    pass']
     call append(line('.'), mainString)
+    return 1
+endfunc
+
+map \py :call Py()<CR>
+func Py(...)
+    call Utf8()
+    call MainPython()
+    call append(line('.'), [''])
+    call AppendTimePython()
     return 1
 endfunc
 
@@ -189,8 +198,7 @@ endfunc
 map \utf :call Utf8()<CR>
 func Utf8(...)
     let Utf8String = ['# -*- coding: UTF-8 -*-']
-    call append(line('.'), Utf8String)
-    "call append(Utf8String)
+    call append(line(0), Utf8String)
     return 1
 endfunc
 
