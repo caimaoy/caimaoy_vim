@@ -340,7 +340,7 @@ map <F3> :silent! Tlist<CR> "按下F3就可以呼出了
 let Tlist_Ctags_Cmd='ctags' "因为我们放在环境变量里，所以可以直接执行
 "let Tlist_Show_One_File=2 "让taglist可以同时展示多个文件的函数列表，如果想只有1个，设置为1
 "let Tlist_File_Fold_Auto_Close=1 "非当前文件，函数列表折叠隐藏
-nnoremap <CR> :nohlsearch<CR><CR>
+" nnoremap <CR> :nohlsearch<CR><CR>
 nnoremap <silent> <space> <C-F>
 
 let g:winManagerWindowLayout='FileExplorer|TagList'
@@ -461,7 +461,8 @@ function! NumberToggle()
     set relativenumber
   endif
 endfunc
-nnoremap <C-m> :call NumberToggle()<cr>
+" nnoremap <C-m> :call NumberToggle()<cr>
+nnoremap <leader>r :call NumberToggle()<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set tags+=tags
