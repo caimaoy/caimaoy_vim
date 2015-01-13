@@ -84,6 +84,7 @@ if has("multi_byte")
     language message zh_CN.UTF-8
 endif
 
+
 set expandtab
 set tabstop=4 softtabstop=4 shiftwidth=4
 set mouse=a selection=exclusive selectmode=mouse,key
@@ -552,7 +553,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
+"vim的菜单乱码解决：
+"同样在 _vimrc文件里以上的中文设置后加上下列命令,一定要加到最后，
 
-
-
-
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
