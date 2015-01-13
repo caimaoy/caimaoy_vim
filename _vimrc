@@ -175,6 +175,9 @@ func Py(...)
     call Utf8()
     call MainPython()
     call append(line('.'), [''])
+    call append(line('.'), [''])
+    call append(line('.'), ["__author__ = 'caimaoy'"])
+    call append(line('.'), [''])
     call AppendTimePython()
     return 1
 endfunc
