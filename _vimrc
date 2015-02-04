@@ -514,6 +514,8 @@ Bundle 'gmarik/Vundle.vim'
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 "call vundle#rc('$VIM/vimfiles/bundle/')
 filetype plugin indent on
 
