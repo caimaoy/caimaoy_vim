@@ -176,6 +176,9 @@ func Py(...)
     call Utf8()
     call MainPython()
     call append(line('.'), [''])
+    call append(line('.'), [''])
+    call append(line('.'), ["__author__ = 'caimaoy'"])
+    call append(line('.'), [''])
     call AppendTimePython()
     return 1
 endfunc
@@ -511,6 +514,8 @@ Bundle 'gmarik/Vundle.vim'
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 "call vundle#rc('$VIM/vimfiles/bundle/')
 filetype plugin indent on
 
