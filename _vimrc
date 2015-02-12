@@ -516,6 +516,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'bling/vim-airline'
 "call vundle#rc('$VIM/vimfiles/bundle/')
 filetype plugin indent on
 
@@ -560,3 +561,16 @@ let g:UltiSnipsEditSplit="vertical"
 
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"airline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+"let g:airline_powerline_fonts = 1
+let g:airline_enable_branch=1
+let g:airline_enable_syntastic=1
+let g:airline_detect_paste=1
+"let g:airline_theme='solarized'
