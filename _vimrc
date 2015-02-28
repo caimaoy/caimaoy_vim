@@ -517,6 +517,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'bling/vim-airline'
+Plugin 'Rykka/riv.vim'
 "call vundle#rc('$VIM/vimfiles/bundle/')
 filetype plugin indent on
 
