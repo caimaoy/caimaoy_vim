@@ -140,8 +140,23 @@ endfunc
 "标签导航
 "Bundle 'majutsushi/tagbar'
 
+"与leader有关的自定义设置
+"=========================
+
 let mapleader = ","
 let g:mapleader = ","
+
+"快速编辑vimrc文件
+nnoremap <leader>ev :vsplit $MYVIMRC<CR>
+
+"重读我的vimrc命令
+nnoremap <leader>sv :source $MYVIMRC<CR>
+
+
+"iabbrev 替换
+"=============
+
+iabbrev slef self
 
 nmap <F9> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
