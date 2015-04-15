@@ -152,6 +152,11 @@ nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 "重读我的vimrc命令
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
+"inoremap jk <esc>
+
+"Operator-Pending映射
+onoremap p i(
+
 
 "iabbrev 替换
 "=============
@@ -532,6 +537,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'bling/vim-airline'
+Plugin 'kshenoy/vim-signature'
 "call vundle#rc('$VIM/vimfiles/bundle/')
 filetype plugin indent on
 
