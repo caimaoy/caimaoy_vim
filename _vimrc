@@ -13,6 +13,9 @@ set showmode
 set scrolloff=7
 set cc=80
 
+" history存储容量
+set history=2000
+
 " set winwidth=79
 "==========================================
 " Display Settings 展示/排版等界面格式设置END
@@ -161,6 +164,11 @@ nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 
 "重读我的vimrc命令
 nnoremap <leader>sv :source $MYVIMRC<CR>
+
+"inoremap jk <esc>
+
+"Operator-Pending映射
+onoremap p i(
 
 
 "iabbrev 替换
@@ -543,7 +551,52 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'bling/vim-airline'
 Plugin 'Rykka/riv.vim'
+Plugin 'kshenoy/vim-signature'
+Plugin 'Raimondi/delimitMatex'
+
+"""""""""""""""""""""""""""""""""""
+Plugin 'vim-scripts/matchit.zip'
+" not work
+let loaded_matchit = 1
+
+"""""""""""""""""""""""""""""""""""
+Plugin 'airblade/vim-gitgutter'
+let g:gitgutter_map_keys = 0
+let g:gitgutter_enabled = 0
+let g:gitgutter_highlight_lines = 1
+nnoremap <leader>gs :GitGutterToggle<CR>
+"""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+" Plugin 'tpope/vim-repeat'
+"
+" "[d]
+" "cs"'
+" ""Hello world!" -> 'Hello world!'
+" "
+" "ds"
+" ""Hello world!" -> Hello world!
+" "
+" "ysiw"
+" "Hello -> "Hello"
+" "
+" "yss"
+" "Hello world -> "Hello world"
+" "
+" "cst"
+" "<a>abc</a>  -> "abc"
+" "
+" "veeS"
+" "hello world -> "hello world"
+" "
+" "ys$" 当前到行尾, 引号引住
+" "
+"""""""""""""""""""""""""""""""""""
+
 "call vundle#rc('$VIM/vimfiles/bundle/')
+
 filetype plugin indent on
 
 " YouCompleteMe 功能
