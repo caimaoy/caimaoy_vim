@@ -140,6 +140,16 @@ endfunc
 "标签导航
 "Bundle 'majutsushi/tagbar'
 
+
+"onoremap
+"========
+"
+"markdown === 标签修改
+
+onoremap ih :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rkvg_"<cr>
+"详解见：http://learnvimscriptthehardway.onefloweroneworld.com/chapters/16.html
+
+
 "与leader有关的自定义设置
 "=========================
 
