@@ -175,6 +175,8 @@ onoremap p i(
 "=============
 
 iabbrev slef self
+iabbrev form from
+iabbrev paht path
 
 nmap <F9> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
