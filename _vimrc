@@ -153,23 +153,41 @@ onoremap ih :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rkvg_"<cr>
 "详解见：http://learnvimscriptthehardway.onefloweroneworld.com/chapters/16.html
 
 
-"与leader有关的自定义设置
+" 与leader有关的自定义设置
 "=========================
 
-let mapleader = ","
-let g:mapleader = ","
+let mapleader = "\<Space>"
+let g:mapleader = "\<Space>"
+"let g:mapleader = ","
 
-"快速编辑vimrc文件
+" 快速编辑vimrc文件
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 
-"重读我的vimrc命令
+" 重读我的vimrc命令
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
-"inoremap jk <esc>
+" inoremap jk <esc>
 
-"Operator-Pending映射
+" Operator-Pending映射
 onoremap p i(
 
+" save file
+nnoremap <Leader>w :w!<CR>
+nnoremap <Leader>s :w!<CR>
+
+" Copy & paste to system clipboard with <Space>p and <Space>y:
+
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+
+"""" 没有理解
+"vnoremap <silent> s //e<C-r>=&selection=='exclusive'?'+1':''<CR><CR>
+"    \:<C-u>call histdel('search',-1)<Bar>let @/=histget('search',-1)<CR>gv
+"omap s :normal vs<CR>
 
 "iabbrev 替换
 "=============
@@ -177,6 +195,7 @@ onoremap p i(
 iabbrev slef self
 iabbrev form from
 iabbrev paht path
+iabbrev donwload download
 
 nmap <F9> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
