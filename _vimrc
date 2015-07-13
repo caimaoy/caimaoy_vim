@@ -196,6 +196,7 @@ iabbrev slef self
 iabbrev form from
 iabbrev paht path
 iabbrev donwload download
+iabbrev reutrn return
 
 nmap <F9> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
@@ -614,6 +615,15 @@ Plugin 'tpope/vim-repeat'
 " "
 " "ys$" 当前到行尾, 引号引住
 " "
+"""""""""""""""""""""""""""""""""""
+
+
+"""""""""""""""""""""""""""""""""""
+Plugin 'terryma/vim-expand-region'
+"vvv在v模式选择word 段落
+"""""""""""""""""""""""""""""""""""
+vmap v <Plug>(expand_region_expand)
+vmap V <Plug>(expand_region_shrink)
 """""""""""""""""""""""""""""""""""
 
 "call vundle#rc('$VIM/vimfiles/bundle/')
